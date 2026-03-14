@@ -1,4 +1,5 @@
 cpuminer-rplant HiveOS Wrapper
+
 This repository provides a custom wrapper for integrating multiple cpuminer binaries into HiveOS. The wrapper automatically detects CPU capabilities and selects the most optimized binary available, ensuring compatibility across different hardware configurations.
 
 Key Features
