@@ -1,21 +1,19 @@
-CPUMINER-RPLANT CUSTOM MINER For HiveOS Flight Sheets.
+# CPUMINER-RPLANT Custom Miner for HiveOS Flight Sheets
 
-This repository provides a custom wrapper for integrating multiple cpuminer binaries into HiveOS. The wrapper automatically detects CPU capabilities and selects the most optimized binary available, ensuring compatibility across different hardware configurations.
+This repository provides a custom wrapper for integrating multiple `cpuminer` binaries into HiveOS. The wrapper automatically detects CPU capabilities and selects the most optimized binary available, ensuring compatibility across different hardware configurations.
 
-Key Features
-Automatic CPU detection: Inspects /proc/cpuinfo and selects the appropriate binary in priority order (Ryzen → AVX512 → AVX2 → SSE4.2 → SSE2).
+## Key Features
+- **Automatic CPU detection**: Inspects `/proc/cpuinfo` and selects the appropriate binary in priority order (Ryzen → AVX512 → AVX2 → SSE4.2 → SSE2).
+- **Fallback mechanism**: If the selected binary is not present, the wrapper defaults to `cpuminer-sse2` to prevent execution errors.
+- **HiveOS integration**: Parses miner logs and outputs JSON statistics in the format expected by HiveOS.
+- **Thread-level monitoring**: Provides per-thread hashrate and temperature reporting for accurate monitoring.
 
-HiveOS integration: Parses miner logs and outputs JSON statistics in the format expected by HiveOS.
+## Benefits
+- Simplifies deployment of cpuminer on HiveOS.  
+- Ensures robust error handling and fallback for uninterrupted mining.  
+- Delivers consistent and detailed monitoring aligned with HiveOS requirements.  
 
-Thread-level monitoring: Provides per-thread hashrate and temperature reporting for accurate monitoring.
-
-Benefits
-Simplifies deployment of cpuminer on HiveOS.
-
-Ensures robust error handling and fallback for uninterrupted mining.
-
-Delivers consistent and detailed monitoring aligned with HiveOS requirements.
-
+## Supported Algorithms
 allium            Garlicoin (GRLC)
 anime             Animecoin (ANI)
 argon2d250        Credits (CRDS)
@@ -141,4 +139,3 @@ cpupower          CPUchain (CPU)
 yespowerSUGAR     Sugarchain (SUGAR)
 yespowerRES       Resistance (RES)
 zr5               Ziftr
-
